@@ -93,7 +93,7 @@ export default function SearchCard1() {
 
   return (
     <div className='h-full'>
-      <div className="container w-full px-4 mx-auto sm:px-8">
+      <div className="w-full mx-auto">
         <div className="py-8">
             <div className="flex items-center justify-around flex-row w-full mb-1 sm:mb-0">
                 <h2 className="text-lg leading-tight font-bold">
@@ -202,12 +202,12 @@ export default function SearchCard1() {
           
                 </div>
                 </div>
-                <div className="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
+                <div className="py-4">
                     <div className="inline-block min-w-full overflow-hidden rounded-lg shadow">
                         <table className="min-w-full leading-normal">
                           <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                           <tr>
-                            <th scope="col" className="font-bold text-lg text-center px-6 py-3 w-1/2">
+                            <th scope="col" className="font-bold text-lg text-center py-3 w-1/2">
                                 정책명
                             </th>
                           </tr>

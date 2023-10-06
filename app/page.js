@@ -58,7 +58,7 @@ export default function Home() {
     </div>  
 
     <Element name="1"></Element>
-    <div id="mySection" className="mx-auto px-10 lg:px-20 pb-10 bg-gray-100">
+    <div id="mySection" className="mx-auto lg:px-20 pb-10 bg-gray-100">
       <Review></Review>
     </div>
 

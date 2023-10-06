@@ -248,13 +248,13 @@ export default function Review(){
                 <Spinner></Spinner>
               </div> 
               ):(
-              <div className='flex h-full flex-col bg-white border border-gray-200 rounded-lg shadow'>
+              <div className='flex flex-col bg-white border border-gray-200 rounded-lg shadow'>
                 <h1 className='text-2xl font-bold text-center my-5'>미래민중 논평</h1>
-                <div className='flex flex-col h-full justify-center'>
-                  <ul className="grid w-full justify-start px-10 grid-rows-5 gap-4 items-center">
+                <div className='flex flex-col justify-center'>
+                  <ul className="grid w-full justify-start px-10 gap-4 items-center">
                     
                     {futureData.map((elem,index)=>(
-                        <li key={index*111} className="w-full pb-3 mx-auto h-32 sm:pb-4 border-b-2 ">
+                        <li key={index*111} className="w-full pb-3 mx-auto sm:pb-4 border-b-2 ">
                         <div className="grid grid-cols-4 items-center space-x-4">
                           <div className="col-span-3">
                             <button onClick={()=>{handleButtonClick(elem.title,elem.contents,"")}}>
@@ -318,12 +318,12 @@ export default function Review(){
                 </div> 
               ):(
               <div className='flex flex-col bg-white border border-gray-200 rounded-lg shadow '>
-              <h1 className='text-2xl font-bold text-center my-5'>칼럼 논평</h1>
+              <h1 className='text-2xl font-bold text-center my-5'>칼럼 연구</h1>
               <div className='flex flex-col justify-center h-full'>
-                <ul className="grid h-full justify-start px-10 grid-rows-5 gap-4 items-center">
+                <ul className="grid h-full justify-start px-10 gap-4 items-center">
                   
                   {columnData.map((elem,index)=>(
-                      <li key={index*111} className="w-full pb-3 mx-auto h-32 sm:pb-4 border-b-2">
+                      <li key={index*111} className="w-full pb-3 mx-auto sm:pb-4 border-b-2">
                       <div className="grid grid-cols-4 items-center space-x-4">
 
                         <div className="col-span-3">

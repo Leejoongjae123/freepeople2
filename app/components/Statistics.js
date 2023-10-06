@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 import Spinner from './Spinner';
 import { FcNext,FcPrevious } from 'react-icons/fc'
+import Link from 'next/link';
 
 export default function Statistics() {
     const [koreaBank,setKoreaBank] = useState([]);
@@ -137,29 +138,35 @@ export default function Statistics() {
                             </tbody>
                         </table>
                         <div className="flex flex-col items-center px-5 py-5 bg-white xs:flex-row xs:justify-between">
-                            <div className="flex items-center">
+                          <div className="flex items-center">
                             <button onClick={() => handlePreviousClick1()} className={`flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100`} ><FcPrevious size={10}></FcPrevious></button>
-                                <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[0])} type="button" className={`${koreaBankNo==koreaBankNoList[0]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `} >
-                                  {koreaBankNoList[0]}
-                                </button>
-                                <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[1])} type="button" className={`${koreaBankNo==koreaBankNoList[1]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
-                                {koreaBankNoList[1]}
-                                </button>
-                                <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[2])} type="button" className={`${koreaBankNo==koreaBankNoList[2]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
-                                {koreaBankNoList[2]}
-                                </button>
-                                <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[3])} type="button" className={`${koreaBankNo==koreaBankNoList[3]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
-                                {koreaBankNoList[3]}
-                                </button>
-                                <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[4])} type="button" className={`${koreaBankNo==koreaBankNoList[4]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
-                                {koreaBankNoList[4]}
-                                </button>
-                                <button onClick={() => handleNextClick1()} className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 "><FcNext size={10}></FcNext></button>
-                            </div>
+                              <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[0])} type="button" className={`${koreaBankNo==koreaBankNoList[0]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `} >
+                                {koreaBankNoList[0]}
+                              </button>
+                              <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[1])} type="button" className={`${koreaBankNo==koreaBankNoList[1]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
+                              {koreaBankNoList[1]}
+                              </button>
+                              <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[2])} type="button" className={`${koreaBankNo==koreaBankNoList[2]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
+                              {koreaBankNoList[2]}
+                              </button>
+                              <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[3])} type="button" className={`${koreaBankNo==koreaBankNoList[3]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
+                              {koreaBankNoList[3]}
+                              </button>
+                              <button value={1} onClick={(e) => handleLinkClick1(e,koreaBankNoList[4])} type="button" className={`${koreaBankNo==koreaBankNoList[4]?('text-blue-500 font-bold'):('text-gray-500')} flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}>
+                              {koreaBankNoList[4]}
+                              </button>
+                              <button onClick={() => handleNextClick1()} className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 "><FcNext size={10}></FcNext></button>
+                          </div>
                         </div>
+                        
                     </div>
+                    <div className='text-right my-2 pr-5'>
+                      <p className="text-base font-semibold text-blue-500 text-right"><Link target='_blank' className='z-50' href='https://snapshot.bok.or.kr/dashboard/100a'>Read more</Link></p>
+                    </div>  
                 </div>
+
             </div>
+            
         </div>
     
   )

@@ -120,7 +120,7 @@ export default function SearchCard1() {
 
   return (
     <div className='h-full'>
-      <div className="container h-full w-full px-4 mx-auto sm:px-8">
+      <div className="container h-full w-full mx-auto">
         <div className="py-8">
             <div className="flex flex-row items-center justify-around w-full mb-1 sm:mb-0">
                 <h2 className="text-lg  leading-tight font-bold">
@@ -217,7 +217,7 @@ export default function SearchCard1() {
           
                 </div>
                 </div>
-                <div className="h-full px-4 py-4  overflow-x-auto sm:px-8">
+                <div className="py-4">
                     
                     <div className="inline-block w-full overflow-hidden rounded-lg shadow">
                         <table className="w-full h-full leading-normal">

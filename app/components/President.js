@@ -133,7 +133,7 @@ export default function President() {
         </div>   
       </div>
 
-      <section className="bg-white">
+      <section className="bg-white px-20">
         <div className="mx-auto ">
 
             <div className='border-t mt-6 pt-8'>
