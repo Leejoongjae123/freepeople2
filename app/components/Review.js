@@ -198,7 +198,7 @@ export default function Review(){
                     <button onClick={()=>{handleButtonClick(bigKindsData.title,bigKindsData.contents,bigKindsData.imageUrl)}}>
                       <h5 className="text-center mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">{bigKindsData.title}</h5>
                     </button>
-                    <p className="mb-3 text-base font-normal text-gray-700 dark:text-gray-400">{bigKindsData.contents}</p>
+                    <p className="whitespace-normal line-clamp-6 mb-3 text-base font-normal text-gray-700 dark:text-gray-400">{bigKindsData.contents}</p>
                     <p className="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400">{bigKindsData.regiDate}</p>
                   </div>
                 </div> 

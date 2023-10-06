@@ -222,7 +222,11 @@ export default function Parliament() {
             <p className="text-base font-semibold text-blue-500 text-right"><Link target='_blank' className='z-50' href='https://theminjoo.kr/main/sub/news/list.php?brd=11'>Read more</Link></p>
           </div>  
         </div>
-        <div>
+
+
+
+        <div className='table-container1'>
+          
           <h1 className='mb-5 text-2xl font-bold text-center'>국회입법조사처</h1>
           <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
           <div className='w-full'>
@@ -230,7 +234,7 @@ export default function Parliament() {
 
             <div className='flex z-10'>
               
-              <table className="table-fixed w-full text-sm text-left text-gray-500 ">
+              <table className="table-auto table-fixed w-full text-sm text-left text-gray-500 ">
                   <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                     <tr>
                       <th scope="col" className="text-lg text-center  px-6 py-3 w-1/2">
@@ -249,7 +253,7 @@ export default function Parliament() {
                   </thead>
                     <tbody>
 
-                      {
+                      {/* {
                         parliamentCreator.map((elem,index)=>{
                           return (
                           <tr key={index} className="bg-white border-b z-50 ">
@@ -268,7 +272,27 @@ export default function Parliament() {
                         </tr>
                           )
                         })
-                      }
+                      } */}
+                      {
+                      parliamentCreator.map((elem,index)=>{
+                        return (
+                        <tr key={index} className="bg-white border-b ">
+                          <td scope="row" className="whitespace-normal px-6 py-4 font-medium text-gray-900">
+                              <a target='_blank' href={elem[0].url}><p className='text-lg font-bold line-clamp-2'>{elem[0]['title']}</p><span className='text-base text-cyan-600'>{elem[0]['writer']}</span></a>
+                          </td>
+                          <td className="text-center truncate w-1/4 px-6 py-4">
+                              {elem[0]['regiDate']}
+                          </td>
+                          <td scope="row" className="whitespace-normal px-6 py-4 font-medium text-gray-900">
+                              <a target='_blank' href={elem[1].url}><p className='text-lg font-bold line-clamp-2'>{elem[1]['title']}</p></a><span className='text-base text-cyan-600'>{elem[1]['writer']}</span>
+                          </td>
+                          <td className="text-center truncate w-1/4 px-6 py-4">
+                              {elem[1]['regiDate']}
+                          </td>
+                      </tr>
+                        )
+                      })
+                    }
                       
                     </tbody>
                 </table>
@@ -276,10 +300,10 @@ export default function Parliament() {
 
             </div>                 
           </div>
+        </div>
           <div className='text-right my-3 pr-5'>
             <p className="text-base font-semibold text-blue-500 text-right"><Link target='_blank' className='z-50' href='https://www.nars.go.kr/report/list.do?cmsCode=CM0043'>Read more</Link></p>
           </div>    
-        </div>
         
     </div>
 

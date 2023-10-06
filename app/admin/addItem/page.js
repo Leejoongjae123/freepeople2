@@ -201,7 +201,7 @@ export default function AddTopic() {
                       onChange={handleInputChange}
                     />
                     <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
-                      칼럼논평
+                      칼럼연구
                     </label>
                   </div>
                 </div>

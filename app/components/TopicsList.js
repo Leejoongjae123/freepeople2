@@ -18,7 +18,7 @@ export default function TopicsList() {
   const [isLoading,setIsloading]=useState(true)
   const [noList,setNoList]=useState([1,2,3,4,5]);
 
-  const categoryName=['정치경제현안','미래민중논평','칼럼논평']
+  const categoryName=['정치경제현안','미래민중논평','칼럼연구']
   
   const fetchData = async () => {
     try {

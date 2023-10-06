@@ -13,10 +13,14 @@ export default function Statistics() {
     const [koreaBankNoList,setKoreaBankNoList]=useState([1,2,3,4,5]);
     const [keyword,setKeyword]=useState("")
     const [buttonSearch,setButtonSearch]=useState(1)
+    const [category,setCategory]=useState("카테고리")
+
+    const [select1Value, setSelect1Value] = useState('카테고리');
+
     const fetchData = async () => {
       
       try {
-          const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getKoreaBank?page=${koreaBankNo}&keyword=${keyword}`);
+          const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getKoreaBank?page=${koreaBankNo}&keyword=${keyword}&category=${category}`);
           setKoreaBank(response.data.data);
           setKoreaBankLoading(false);
           console.log("loading완료66666")
@@ -65,7 +69,15 @@ export default function Statistics() {
       const newValue = event.target.value;
       setKeyword(newValue);
     };
-  
+    
+    const handleSelect1Change = (e) => {
+      const selectedValue = e.target.value;
+      setSelect1Value(selectedValue);
+      setCategory(selectedValue)
+      // select1에서 A를 선택하면 select2를 초기화
+    };
+
+    console.log('category:',category)
     return (
 
     <div className="w-full mx-auto lg:px-20">
@@ -77,7 +89,12 @@ export default function Statistics() {
                   </h2>
                 </div>
                 <div className="">
-                  <form className="flex flex-col justify-center md:flex-row md:w-full md:space-x-3 md:space-y-0">
+                  <form className="flex flex-col mt-5 md:mt-0 justify-center md:flex-row md:w-full md:space-x-3 md:space-y-0">
+                    <select value={select1Value} onChange={handleSelect1Change} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                      <option value="">-- 선택 --</option>
+                      <option value="카테고리">카테고리</option>
+                      <option value="이름">이름</option>
+                    </select>
                     <div className="my-5 md:my-0">
                       <input type="text" value={keyword} onChange={handleInputChange} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent" placeholder="검색어"/>
                     </div>
