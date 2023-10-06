@@ -5,7 +5,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 import Spinner from './Spinner';
 import Link from 'next/link';
-
+import './test.css'
 
 export default function Parliament() {
 
@@ -105,7 +105,8 @@ export default function Parliament() {
       </div>
       
       <div className="pt-10 grid gap-8 md:grid-cols-1">
-        <div>
+        <div className=''>
+          <div className=''>
           <h1 className='mb-5 text-2xl font-bold text-center'>국민의힘</h1>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg bg-white">  
               <div className='flex'>
@@ -161,6 +162,7 @@ export default function Parliament() {
               <p className="text-base font-semibold text-blue-500 text-right"><Link target='_blank' className='z-50' href='https://www.peoplepowerparty.kr/news/comment/BBSDD0001'>Read more</Link></p>
             </div>  
           </div>
+          </div>
 
 
 
@@ -173,7 +175,7 @@ export default function Parliament() {
             
             <div className='flex'>
               {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/dubul-removebg-preview.png"></img> */}
-              <table className="table-fixed w-full text-sm text-left text-gray-500 z-50">
+              <table className="table-fixed w-full text-sm text-left text-gray-500">
                 
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                   <tr>
