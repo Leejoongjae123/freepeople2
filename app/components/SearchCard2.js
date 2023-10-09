@@ -41,6 +41,7 @@ export default function SearchCard1() {
   const handleSelect3Change = (e) => {
     const selectedValue = e.target.value;
     setSelect3Value(selectedValue);
+    setSelect4Value('-- 선택 --');
     setIsSelect(false);
     if (select1Value === "지선") {
       setCount(count + 1);
