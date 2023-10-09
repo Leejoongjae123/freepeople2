@@ -61,11 +61,17 @@ export default function SliderKOSIS() {
         {KOSIS.map((elem, index) => {
           return (
             <div className="flex flex-col slider" key={index}>
-              <div className="relative">
-                <img
+              <div className="relative h-52">
+                {/* <img
                   src={elem.imageSrc}
                   alt="이미지 설명"
                   className="w-full h-auto"
+                /> */}
+                <Image
+                  src={elem.imageSrc}
+                  alt="이미지 설명"
+                  className="object-cover"
+                  fill
                 />
 
                 <div className="flex absolute top-0 left-0 text-white p-2 text-xs">

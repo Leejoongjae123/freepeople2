@@ -60,8 +60,9 @@ export default function PresidentSlider() {
         {presidentRealmeter.map((elem, index) => {
           return (
             <div className="flex flex-col slider" key={index}>
-              <div className="h-56">
-                <img className="object-cover overflow-hidden" src={elem.imageSrc} alt="movie" />
+              <div className="relative h-56">
+                {/* <img className="object-cover overflow-hidden" src={elem.imageSrc} alt="movie" /> */}
+                <Image src={elem.imageSrc} fill  className="object-cover"/>
               </div>
               <a href={elem.url} target="_blank">
               <p className="text-lg line-clamp-2 font-bold font-black ">
